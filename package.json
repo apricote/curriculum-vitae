@@ -1,0 +1,25 @@
+{
+  "name": "curriculum-vitae",
+  "version": "1.0.0",
+  "scripts": {
+    "build:json": "js-yaml resume.yaml > resume.json",
+    "build": "npm run build:json && PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium kissmyresume build -t stackoverflow resume.json",
+    "build:watch": "nodemon --exec 'npm run build'",
+    "validate": "npm run build:json && kissmyresume validate resume.json"
+  },
+  "author": "Julian Tölle <julian.toelle97@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "jsonresume-theme-stackoverflow": "apricote/jsonresume-theme-stackoverflow#afb0bc1",
+    "kiss-my-resume": "^0.8.2",
+    "nodemon": "^2.0.9"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "out/*",
+      "resume.json"
+    ],
+    "ext": "yaml"
+  }
+}
