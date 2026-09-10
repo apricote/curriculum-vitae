@@ -10,7 +10,7 @@
   "author": "Julian Tölle <julian.toelle97@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "js-yaml": "4.1.0",
+    "js-yaml": "4.3.2",
     "jsonresume-theme-stackoverflow": "apricote/jsonresume-theme-stackoverflow#afb0bc1",
     "kiss-my-resume": "0.8.2",
     "nodemon": "2.0.16"
